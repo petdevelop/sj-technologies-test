@@ -1,0 +1,32 @@
+<main>
+  <!-- Toolbar -->
+  <app-header></app-header>
+
+  <div class="content">
+    <!-- Content -->
+    <div style="display: flex; width: 30%; align-content: space-evenly; flex-wrap: wrap; margin-bottom: 20px;">
+        <div style="flex: 1;">
+          <span style="font-weight: bold;">Widgets:</span> 
+          {{ widgets.length }}    
+        </div>
+        <div style="flex: 1;">
+          <span style="font-weight: bold;">Total Price:</span> 
+          {{ totalPrice }}
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        <app-widget *ngFor="let widget of widgets"
+        [widget]="widget"
+        (onDelete)="onDelete($event)"
+      >
+      </app-widget>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <!-- <app-footer></app-footer> -->
+
+</main>
+

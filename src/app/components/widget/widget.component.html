@@ -1,0 +1,17 @@
+
+
+    <div class="card">
+      <div><span style="font-weight: bold;">{{widgetArray[3][1]}}</span></div>
+
+      <app-field *ngFor="let field of widgetArray"
+        [field]="{name: field[0], value: field[1]}"
+      >
+      </app-field>
+
+      <div style="margin-top: 20px;">
+        <button (click)="onDeleteHandler(widget.id)" 
+          style="background-color: #1976d2; ;padding: 5px; color: white; border-radius: 5%; border: none; cursor: pointer;">
+          DELETE
+        </button>
+      </div>
+    </div>
